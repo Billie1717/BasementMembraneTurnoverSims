@@ -36,13 +36,6 @@ Both NC1 (end-to-end) and 7S (lateral) bonds use a distance-gated stochastic mak
 | `r0_7s` | 0.5 | 7S bond rest length |
 | `max_bonds_7s` | 3 | Maximum 7S bonds per bead |
 
-## Grand canonical ensemble (GCE)
-
-| Parameter | Value | Description |
-|-----------|-------|-------------|
-| `N_preferred` | 0 | Target monomer count (0 = fixed number) |
-| `OvaR` | 3.5 | Overlap exclusion radius for monomer insertion |
-
 ## Replicates
 
 Three independent seeds (1, 2, 3) were run for each `MP` value, giving 9 simulations in total.
