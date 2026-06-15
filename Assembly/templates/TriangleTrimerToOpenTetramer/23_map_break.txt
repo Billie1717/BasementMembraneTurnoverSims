@@ -1,0 +1,37 @@
+molecule map:
+
+12 equivalences
+1 constraints
+4 edgeIDs
+
+InitiatorIDs
+
+1
+4
+
+EdgeIDs
+
+9
+10
+11
+12
+
+Equivalences
+
+1  1
+2  2
+3  3
+4  4
+5  5
+6  6
+7  7
+8  8
+9  9
+10  10
+11  11
+12  12
+
+Constraints
+
+custom "random(0,1,v_lseedrxn) < exp(v_krxn*(sqrt(rxndiffIvan(v_xrxn,1)^2+rxndiffIvan(v_yrxn,1)^2+rxndiffIvan(v_zrxn,1)^2) - v_r0rxn)^2-v_Ebondrxn)"
+
