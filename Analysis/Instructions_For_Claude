@@ -1,0 +1,71 @@
+Only create and put code/folders into Github_Paper. GithubCode is a good outline for how I want my Github_Paper repository to be structured. My new models/code are all in FromCluster. These are the codes which should be understood and synthesised into Github_Paper repository which will be a public repository for a paper. 
+
+Big picture:
+This code is to reproduce coarse-grained MD simulations which were done for the paper "Basement membrane turnover controls tissue shape" Barrientos et al. (2026) Cell. The author of this repository is Billie Meadowcroft.
+
+## Overview of the model
+
+Each collagen IV protomer is represented as a two-bead rod: one bead for the
+NC1 domain and one for the 7S domain. NC1 beads bind pairwise; 7S beads can
+bind up to three other 7S beads, so protomers self-assemble into a percolating
+network resembling the BM. Bond formation and breaking is implemented in
+LAMMPS via the `bond/react` package, which requires one `pre` / `post` / `map`
+template triple per allowed change of NC1 / 7S valency — hence the large
+`templates/` directories described below.
+
+Key simulation stages are:
+
+1. **Self-assembly** of the network from a random initial
+   configuration (`Initial_config/`).
+2. **Equilibrate with GCE** Equilibrate the networks while implementing the grand canonical ensemble (addition and removal of monomers).
+3. **Stretch** of the equilibrated network at a chosen strain in x- and y- directions.
+3. **Growth** or indefinite growth of the equilibrated networks by applying a constant stress. 
+
+Outputs from the simulations are time series of stress (in the case of fixed strain), turnover measurements, strain (in the case of constant stress).
+
+A simplified, heavily-commented, **non-runnable** companion script
+`model_scripts/Stretch/build_Stretch_SimpleAnnotated.py` walks through the
+real `build_Stretch.py` block by block and is the recommended starting point
+for understanding what the LAMMPS input file actually does.
+
+> TODO: short reference to the specific equations / potentials, plus the
+> previous model paper this builds on (ref. 37 in the manuscript).
+
+---
+
+## Repository layout
+
+## Requirements
+
+**Simulations**
+
+- **LAMMPS** version `lammps-15Jun2023`. LAMMPS must be **built with the
+  custom `REACTION` package source files in `lammps_src/`** — replace
+  `src/REACTION/fix_bond_react.{cpp,h}` in the LAMMPS source tree with the
+  versions in this repo, then build as usual.
+- A C++ compiler (for building LAMMPS).
+- MPI (optional) for parallel runs.
+
+**Analysis & plotting**
+
+- Python ≥ 3.9
+- `numpy`, `scipy`, `pandas`, `matplotlib`, `seaborn`, `jupyter`
+- AFT (Alignment by Fourier Transform) workflow — Marcotti, S. et al. (2021) 10.3389/fcomp.2021.745831
+- OVITO (for opening the `.ovito` snapshot scenes)
+
+## Running the simulations
+
+Each `model_scripts/<Stage>/` folder contains the LAMMPS inputs and SLURM
+wrappers for one experiment. The general pattern is: a top-level `*.sh`
+launcher reads parameters, calls a `build_*.py` script that writes a
+LAMMPS input deck (`collagen.in`) plus a SLURM submission script
+(`runscript.sh`), and then submits the job.
+
+## Data processing
+
+## Citing this work
+
+## Contact
+
+- Code questions: Billie Meadowcroft — billiemead@hotmail.co.uk
+- Corresponding author: Yanlan Mao — y.mao@ucl.ac.uk
