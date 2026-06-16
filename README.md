@@ -4,7 +4,6 @@ Code to reproduce the coarse-grained MD simulations in:
 
 > Barrientos et al. (2026) "Basement membrane turnover controls tissue shape." *Cell.*
 
-**For questions/comments please contact:** Billie Meadowcroft (billiemead@hotmail.co.uk)  
 ---
 
 ## Model overview
@@ -46,5 +45,8 @@ To run without SLURM:
 cd <run_folder>/
 mpirun -np 1 /PATH/lammps-15Jun2023/src/lmp_mpi -in collagen.in
 ```
+
+**For questions/comments please contact:** Billie Meadowcroft (billiemead@hotmail.co.uk)  
+
 
 See each stage's `README.md` for prerequisites and output file descriptions.
