@@ -1,0 +1,41 @@
+molecule template:
+
+     7 atoms
+     6 bonds
+     8 angles
+     1 fragments
+
+Types
+
+    1 2
+    2 1
+    3 1
+    4 7
+    5 7
+    6 7
+    7 7
+
+Bonds
+
+    1 1 1 2
+    2 1 3 4
+    3 3 4 5
+    4 3 4 6
+    5 3 5 6
+    6 3 4 7
+
+Angles
+
+    1 2 3 4 5
+    2 2 3 4 6
+    3 2 3 4 7
+    4 3 6 4 5
+    5 3 4 5 6
+    6 3 5 6 4
+    7 3 7 4 5
+    8 3 7 4 6
+
+Fragments
+
+    1 2 3
+
