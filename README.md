@@ -4,9 +4,7 @@ Code to reproduce the coarse-grained MD simulations in:
 
 > Barrientos et al. (2026) "Basement membrane turnover controls tissue shape." *Cell.*
 
-**Author:** Billie Meadowcroft (billiemead@hotmail.co.uk)  
-**Corresponding author:** Yanlan Mao (y.mao@ucl.ac.uk)
-
+**For questions/comments please contact:** Billie Meadowcroft (billiemead@hotmail.co.uk)  
 ---
 
 ## Model overview
