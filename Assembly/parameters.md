@@ -38,7 +38,7 @@ Both NC1 (end-to-end) and 7S (lateral) bonds use a distance-gated stochastic mak
 
 ## Replicates
 
-Three independent seeds (1, 2, 3) were run for each `MP` value, giving 9 simulations in total.
+Three independent seeds (1, 2, 3) were run for each `MP` value.
 
 ## Initial configuration
 
