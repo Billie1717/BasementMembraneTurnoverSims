@@ -1,0 +1,13 @@
+1 constraints
+
+custom "rxndiffIvan(v_vNumType9,1) > random(0,1,1234)"
+
+1 constraints
+
+Constraints
+
+custom "rxndiffIvan(v_P_remov_atom,1) > random(0,1,1234)"
+
+Constraints
+
+custom "rxndiffIvan(v_P_add_atom,1) > random(0,1,1234)"

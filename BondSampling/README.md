@@ -22,7 +22,6 @@ For a detailed walkthrough of the counting variables, see `build_BondSampling_an
 | `parameters.md` | Parameters used for the paper |
 | `templates/` | `bond/react` template files (same set as Equilibration) |
 | `analysis/Histogram_Types.py` | Counts beads of each type at each trajectory frame |
-| `analysis/HistogrammingTypesBondSampling.sh` | Launcher for the histogramming analysis |
 
 ## Running the simulations
 
@@ -42,16 +41,6 @@ For a detailed walkthrough of the counting variables, see `build_BondSampling_an
    - `restart/` — restart files
    - `data.postmakebonds` — final configuration with bond topology
 5. One can also directly run using `mpirun -np 1 /PATH/lammps-15Jun2023/src/lmp_mpi -in collagen.in` from within the run folder.
-
-## Analysis: histogramming particle types
-
-After simulations complete, run the histogramming script to count bead types at each frame.
-
-```bash
-bash analysis/HistogrammingTypesBondSampling.sh
-```
-
-Output `.txt` files are written to `analysis/Data/`. These are read by the plotting notebooks (see `analysis/Plotting/`).
 
 ## Output columns of `thermo.dat`
 
