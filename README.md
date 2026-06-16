@@ -46,7 +46,6 @@ cd <run_folder>/
 mpirun -np 1 /PATH/lammps-15Jun2023/src/lmp_mpi -in collagen.in
 ```
 
-**For questions/comments please contact:** Billie Meadowcroft (billiemead@hotmail.co.uk)  
-
-
 See each stage's `README.md` for prerequisites and output file descriptions.
+
+**For questions/comments please contact:** Billie Meadowcroft (billiemead@hotmail.co.uk)  
